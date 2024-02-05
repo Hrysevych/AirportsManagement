@@ -56,8 +56,7 @@ public class AuthService {
                 if (secretKey.isPresent()) {
                     secretKey.get().destroy();
                 }
-            } catch (DestroyFailedException e) {
-                throw new RuntimeException(e);
+            } catch (DestroyFailedException ignore) {
             }
         }
     }

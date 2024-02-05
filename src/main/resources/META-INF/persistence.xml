@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+ https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+    <persistence-unit name="em" transaction-type="RESOURCE_LOCAL">
+        <class>sa.alrakeen.entity.User</class>
+        <class>sa.alrakeen.entity.Airport</class>
+        <properties>
+            <property name="openjpa.ConnectionDriverName" value="org.postgresql.Driver"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:postgresql://localhost:5432/alrakeen"/>
+            <property name="openjpa.ConnectionUserName" value="postgres"/>
+            <property name="openjpa.ConnectionPassword" value="www123"/>
+
+<!--            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>-->
+<!--            <property name="jakarta.persistence.schema-generation.drop-source" value="script" />-->
+<!--            <property name="jakarta.persistence.schema-generation.drop-script-source" value="META-INF/sql/drop.sql" />-->
+<!--            <property name="jakarta.persistence.schema-generation.create-source" value="script"/>-->
+<!--            <property name="jakarta.persistence.schema-generation.create-script-source" value="META-INF/sql/create.sql" />-->
+<!--            <property name="jakarta.persistence.sql-load-script-source" value="META-INF/sql/data.sql" />-->
+        </properties>
+    </persistence-unit>
+</persistence>
